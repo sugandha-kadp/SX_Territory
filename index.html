@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sugandha KADP">
+    <title>Ford Territory SX Factory Workshop Manual - Ultimate Master Index</title>
+    <style>
+        /* Developed by: Sugandha KADP
+        */
+        :root {
+            --primary-blue: #003399;
+            --dark-navy: #0f172a;
+            --border-light: #e2e8f0;
+            --sidebar-bg: #ffffff;
+            --card-bg: #ffffff;
+            --card-hover: #f8fafc;
+            --accent-blue: #2563eb;
+            --text-main: #334155;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: #f1f5f9; color: var(--text-main); display: flex; flex-direction: column; min-height: 100vh; }
+
+        header { background-color: var(--dark-navy); color: #ffffff; padding: 1.25rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .brand h1 { font-size: 1.4rem; font-weight: 700; }
+        .brand span { font-size: 0.85rem; color: #93c5fd; display: block; margin-top: 2px; }
+        
+        .header-controls { display: flex; align-items: center; gap: 15px; }
+        .menu-toggle { display: none; background: none; border: 1px solid #94a3b8; color: white; padding: 0.5rem 0.8rem; border-radius: 6px; cursor: pointer; }
+        .search-container input { width: 380px; padding: 0.6rem 1.2rem; background-color: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; color: #ffffff; font-size: 0.9rem; outline: none; }
+        
+        .app-layout { display: flex; flex: 1; max-width: 1800px; width: 100%; margin: 0 auto; }
+        aside { width: 320px; background-color: var(--sidebar-bg); border-right: 1px solid var(--border-light); padding: 1.75rem 1.2rem; position: sticky; top: 85px; height: calc(100vh - 85px); overflow-y: auto; flex-shrink: 0; }
+        .filter-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text-muted); margin-bottom: 1rem; font-weight: 700; padding-left: 0.5rem; }
+        .nav-list { list-style: none; }
+        .nav-item { padding: 0.75rem 1rem; border-radius: 8px; cursor: pointer; font-weight: 500; font-size: 0.9rem; margin-bottom: 0.35rem; color: #475569; }
+        .nav-item:hover { background-color: var(--card-hover); color: var(--text-dark); }
+        .nav-item.active { background-color: #f0f7ff; color: var(--primary-blue); font-weight: 600; border-left: 4px solid var(--primary-blue); border-radius: 0 8px 8px 0; }
+
+        main { flex: 1; padding: 2rem; }
+        .welcome-card { background: linear-gradient(135deg, #003399 0%, #1e40af 100%); color: #ffffff; padding: 2rem; border-radius: 12px; margin-bottom: 2.5rem; }
+        .grid-header { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-dark); border-bottom: 2px solid var(--border-light); padding-bottom: 0.5rem; }
+        .manual-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+        .doc-card { background-color: var(--card-bg); border: 1px solid var(--border-light); border-radius: 10px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+        .doc-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .badge { background-color: #f1f5f9; color: #334155; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 4px; border: 1px solid #e2e8f0; }
+        .group-tag { font-size: 0.75rem; font-weight: 700; color: var(--accent-blue); text-transform: uppercase; }
+        .doc-card h3 { font-size: 1.1rem; color: var(--text-dark); margin-bottom: 0.6rem; }
+        .action-link { display: block; text-align: center; background-color: var(--primary-blue); color: #ffffff; text-decoration: none; padding: 0.7rem; border-radius: 6px; font-weight: 600; font-size: 0.88rem; }
+        .hidden { display: none !important; }
+
+        /* Footer Style */
+        footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-light); background: #ffffff; }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 900px) {
+            .search-container input { width: 250px; }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 1rem; }
+            .menu-toggle { display: block; }
+            .search-container input { width: 100%; }
+            .header-controls { flex-direction: column; width: 100%; gap: 10px; }
+            
+            .app-layout { flex-direction: column; }
+            aside { width: 100%; position: relative; top: 0; height: auto; display: none; border-right: none; border-bottom: 1px solid var(--border-light); }
+            aside.mobile-active { display: block; }
+            main { padding: 1rem; }
+            .welcome-card { padding: 1.5rem; }
+            .manual-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand">
+            <h1>SX Territory Ultimate Workshop Portal</h1>
+            <span>Exhaustive OEM Service Repair Blueprint</span>
+        </div>
+        <div class="header-controls">
+            <button class="menu-toggle" onclick="toggleSidebar()">Menu</button>
+            <div class="search-container">
+                <input type="text" id="manualSearch" placeholder="Search sections, codes (e.g. 204-00)...">
+            </div>
+        </div>
+    </header>
+
+    <div class="app-layout">
+        <aside id="sidebarNav">
+            <div class="filter-title">Manual Service Groups</div>
+            <ul class="nav-list">
+                <li class="nav-item active" onclick="filterGroup('all', this)">All Modules</li>
+                <li class="nav-item" onclick="filterGroup('group1', this)">Group 1: General Info</li>
+                <li class="nav-item" onclick="filterGroup('group2', this)">Group 2: Chassis & Driveline</li>
+                <li class="nav-item" onclick="filterGroup('group3', this)">Group 3: Powertrain</li>
+                <li class="nav-item" onclick="filterGroup('group4', this)">Group 4: Electrical & HVAC</li>
+                <li class="nav-item" onclick="filterGroup('group5', this)">Group 5: Body & Paint</li>
+            </ul>
+        </aside>
+
+        <main>
+            <div class="welcome-card">
+                <h2 id="currentCategoryTitle">All Service Modules</h2>
+            </div>
+            <div class="grid-header">Available Factory Subsystems</div>
+            <div class="manual-grid" id="manualGrid">
+                <div class="doc-card" data-group="group1"><div class="doc-meta"><span class="badge">100-02</span><span class="group-tag">Gen Info</span></div><h3>Jacking and Lifting</h3><a href="https://fordforums.com.au/wsmpub/sx/100-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group1"><div class="doc-meta"><span class="badge">100-04</span><span class="group-tag">Gen Info</span></div><h3>Noise, Vibration and Harshness</h3><a href="https://fordforums.com.au/wsmpub/sx/100-04.html" target="_blank" class="action-link">Open</a></div>
+                
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">204-00</span><span class="group-tag">Chassis</span></div><h3>Suspension System - General</h3><a href="https://fordforums.com.au/wsmpub/sx/204-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">204-01</span><span class="group-tag">Chassis</span></div><h3>Front Suspension</h3><a href="https://fordforums.com.au/wsmpub/sx/204-01.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">204-02</span><span class="group-tag">Chassis</span></div><h3>Rear Suspension - IRS</h3><a href="https://fordforums.com.au/wsmpub/sx/204-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">204-04</span><span class="group-tag">Chassis</span></div><h3>Rear Suspension</h3><a href="https://fordforums.com.au/wsmpub/sx/204-04.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">205-00</span><span class="group-tag">Chassis</span></div><h3>Driveline System - General</h3><a href="https://fordforums.com.au/wsmpub/sx/205-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">205-01</span><span class="group-tag">Chassis</span></div><h3>Driveshaft</h3><a href="https://fordforums.com.au/wsmpub/sx/205-01.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">205-02</span><span class="group-tag">Chassis</span></div><h3>Rear Drive Axle/Differential</h3><a href="https://fordforums.com.au/wsmpub/sx/205-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">205-03</span><span class="group-tag">Chassis</span></div><h3>Front Drive Axle/Differential</h3><a href="https://fordforums.com.au/wsmpub/sx/205-03.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">205-04</span><span class="group-tag">Chassis</span></div><h3>Front Drive Halfshafts</h3><a href="https://fordforums.com.au/wsmpub/sx/205-04.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">205-05</span><span class="group-tag">Chassis</span></div><h3>Rear Drive Halfshafts</h3><a href="https://fordforums.com.au/wsmpub/sx/205-05.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">206-00</span><span class="group-tag">Chassis</span></div><h3>Brake System - General</h3><a href="https://fordforums.com.au/wsmpub/sx/206-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">206-03</span><span class="group-tag">Chassis</span></div><h3>Front Disc Brake</h3><a href="https://fordforums.com.au/wsmpub/sx/206-03.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">206-04</span><span class="group-tag">Chassis</span></div><h3>Rear Disc Brake</h3><a href="https://fordforums.com.au/wsmpub/sx/206-04.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">206-05</span><span class="group-tag">Chassis</span></div><h3>Parking Brake and Actuation</h3><a href="https://fordforums.com.au/wsmpub/sx/206-05.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">206-06</span><span class="group-tag">Chassis</span></div><h3>Hydraulic Brake Actuation</h3><a href="https://fordforums.com.au/wsmpub/sx/206-06.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">206-09a</span><span class="group-tag">Chassis</span></div><h3>206-09A RWD Anti-Lock / Traction</h3><a href="https://fordforums.com.au/wsmpub/sx/206-09a.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">206-09b</span><span class="group-tag">Chassis</span></div><h3>206-09B Brake and Stability Control</h3><a href="https://fordforums.com.au/wsmpub/sx/206-09b.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">211-00</span><span class="group-tag">Chassis</span></div><h3>Steering System - General</h3><a href="https://fordforums.com.au/wsmpub/sx/211-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">211-02</span><span class="group-tag">Chassis</span></div><h3>Power Steering</h3><a href="https://fordforums.com.au/wsmpub/sx/211-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">211-03</span><span class="group-tag">Chassis</span></div><h3>Steering Linkage</h3><a href="https://fordforums.com.au/wsmpub/sx/211-03.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">211-04</span><span class="group-tag">Chassis</span></div><h3>Steering Column</h3><a href="https://fordforums.com.au/wsmpub/sx/211-04.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group2"><div class="doc-meta"><span class="badge">211-05</span><span class="group-tag">Chassis</span></div><h3>Steering Column Switches</h3><a href="https://fordforums.com.au/wsmpub/sx/211-05.html" target="_blank" class="action-link">Open</a></div>
+
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">303-00</span><span class="group-tag">Powertrain</span></div><h3>Engine System - General</h3><a href="https://fordforums.com.au/wsmpub/sx/303-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">303-01a</span><span class="group-tag">Powertrain</span></div><h3>303-01A Engine - I6</h3><a href="https://fordforums.com.au/wsmpub/sx/303-01a.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">303-03</span><span class="group-tag">Powertrain</span></div><h3>Engine Cooling</h3><a href="https://fordforums.com.au/wsmpub/sx/303-03.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">303-05</span><span class="group-tag">Powertrain</span></div><h3>Accessory Drive</h3><a href="https://fordforums.com.au/wsmpub/sx/303-05.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">303-06</span><span class="group-tag">Powertrain</span></div><h3>Starting System</h3><a href="https://fordforums.com.au/wsmpub/sx/303-06.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">303-08</span><span class="group-tag">Powertrain</span></div><h3>Engine Emission Control</h3><a href="https://fordforums.com.au/wsmpub/sx/303-08.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">303-12</span><span class="group-tag">Powertrain</span></div><h3>Intake Air Distribution</h3><a href="https://fordforums.com.au/wsmpub/sx/303-12.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">303-14</span><span class="group-tag">Powertrain</span></div><h3>Powertrain Control Management</h3><a href="https://fordforums.com.au/wsmpub/sx/303-14.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">307-01</span><span class="group-tag">Powertrain</span></div><h3>Automatic Transmission - AWD</h3><a href="https://fordforums.com.au/wsmpub/sx/307-01.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">307-02</span><span class="group-tag">Powertrain</span></div><h3>Transmission and Transaxle</h3><a href="https://fordforums.com.au/wsmpub/sx/307-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">307-05</span><span class="group-tag">Powertrain</span></div><h3>Automatic Transmission</h3><a href="https://fordforums.com.au/wsmpub/sx/307-05.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">307-08a</span><span class="group-tag">Powertrain</span></div><h3>308-07A: All-Wheel-Drive (AWD) System</h3><a href="https://fordforums.com.au/wsmpub/sx/307-08a.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">308-07b</span><span class="group-tag">Powertrain</span></div><h3>308-07B Transfer Case</h3><a href="https://fordforums.com.au/wsmpub/sx/308-07b.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">309-00</span><span class="group-tag">Powertrain</span></div><h3>Exhaust System</h3><a href="https://fordforums.com.au/wsmpub/sx/309-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">310-00</span><span class="group-tag">Powertrain</span></div><h3>Fuel System</h3><a href="https://fordforums.com.au/wsmpub/sx/310-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group3"><div class="doc-meta"><span class="badge">310-02</span><span class="group-tag">Powertrain</span></div><h3>Acceleration Control</h3><a href="https://fordforums.com.au/wsmpub/sx/310-02.html" target="_blank" class="action-link">Open</a></div>
+
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">412-00</span><span class="group-tag">Elect/HVAC</span></div><h3>Climate Control System</h3><a href="https://fordforums.com.au/wsmpub/sx/412-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">412-02</span><span class="group-tag">Elect/HVAC</span></div><h3>Heating and Ventilation</h3><a href="https://fordforums.com.au/wsmpub/sx/412-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">412-03</span><span class="group-tag">Elect/HVAC</span></div><h3>SECTION 412-03: Air</h3><a href="https://fordforums.com.au/wsmpub/sx/412-03.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">412-04</span><span class="group-tag">Elect/HVAC</span></div><h3>Control Components for Climate</h3><a href="https://fordforums.com.au/wsmpub/sx/412-04.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">413-01</span><span class="group-tag">Elect/HVAC</span></div><h3>Instrument Cluster</h3><a href="https://fordforums.com.au/wsmpub/sx/413-01.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">413-06</span><span class="group-tag">Elect/HVAC</span></div><h3>Horn</h3><a href="https://fordforums.com.au/wsmpub/sx/413-06.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">413-07</span><span class="group-tag">Elect/HVAC</span></div><h3>Clock</h3><a href="https://fordforums.com.au/wsmpub/sx/413-07.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">413-08</span><span class="group-tag">Elect/HVAC</span></div><h3>Interior Command Centre</h3><a href="https://fordforums.com.au/wsmpub/sx/413-08.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">413-13</span><span class="group-tag">Elect/HVAC</span></div><h3>Parking Aid</h3><a href="https://fordforums.com.au/wsmpub/sx/413-13.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">414-00</span><span class="group-tag">Elect/HVAC</span></div><h3>Charging System - General</h3><a href="https://fordforums.com.au/wsmpub/sx/414-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">414-01</span><span class="group-tag">Elect/HVAC</span></div><h3>Battery, Mounting and Cables</h3><a href="https://fordforums.com.au/wsmpub/sx/414-01.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">414-02</span><span class="group-tag">Elect/HVAC</span></div><h3>Alternator and Regulator</h3><a href="https://fordforums.com.au/wsmpub/sx/414-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">415-00</span><span class="group-tag">Elect/HVAC</span></div><h3>Entertainment System - General</h3><a href="https://fordforums.com.au/wsmpub/sx/415-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">415-01</span><span class="group-tag">Elect/HVAC</span></div><h3>Audio Unit</h3><a href="https://fordforums.com.au/wsmpub/sx/415-01.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">415-02</span><span class="group-tag">Elect/HVAC</span></div><h3>Antenna</h3><a href="https://fordforums.com.au/wsmpub/sx/415-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">415-03</span><span class="group-tag">Elect/HVAC</span></div><h3>Speakers</h3><a href="https://fordforums.com.au/wsmpub/sx/415-03.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">417-01</span><span class="group-tag">Elect/HVAC</span></div><h3>Exterior Lighting</h3><a href="https://fordforums.com.au/wsmpub/sx/417-01.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">417-02</span><span class="group-tag">Elect/HVAC</span></div><h3>Interior Lighting</h3><a href="https://fordforums.com.au/wsmpub/sx/417-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">418-00</span><span class="group-tag">Elect/HVAC</span></div><h3>Module Communications</h3><a href="https://fordforums.com.au/wsmpub/sx/418-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">419-07</span><span class="group-tag">Elect/HVAC</span></div><h3>Satellite Navigation</h3><a href="https://fordforums.com.au/wsmpub/sx/419-07.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">419-08</span><span class="group-tag">Elect/HVAC</span></div><h3>Cellular Phone</h3><a href="https://fordforums.com.au/wsmpub/sx/419-08.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group4"><div class="doc-meta"><span class="badge">419-10</span><span class="group-tag">Elect/HVAC</span></div><h3>Body Electronics Module (BEM)</h3><a href="https://fordforums.com.au/wsmpub/sx/419-10.html" target="_blank" class="action-link">Open</a></div>
+
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-00</span><span class="group-tag">Body</span></div><h3>General Information</h3><a href="https://fordforums.com.au/wsmpub/sx/501-00.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-02</span><span class="group-tag">Body</span></div><h3>Front End Body Panels</h3><a href="https://fordforums.com.au/wsmpub/sx/501-02.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-03</span><span class="group-tag">Body</span></div><h3>Body Closures</h3><a href="https://fordforums.com.au/wsmpub/sx/501-03.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-05</span><span class="group-tag">Body</span></div><h3>Exterior Trim and Ornamentation</h3><a href="https://fordforums.com.au/wsmpub/sx/501-05.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-08</span><span class="group-tag">Body</span></div><h3>Exterior Trim and Ornamentation</h3><a href="https://fordforums.com.au/wsmpub/sx/501-08.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-09</span><span class="group-tag">Body</span></div><h3>Rear View Mirrors</h3><a href="https://fordforums.com.au/wsmpub/sx/501-09.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-10</span><span class="group-tag">Body</span></div><h3>Seating</h3><a href="https://fordforums.com.au/wsmpub/sx/501-10.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-11</span><span class="group-tag">Body</span></div><h3>Glass, Frames and Mechanisms</h3><a href="https://fordforums.com.au/wsmpub/sx/501-11.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-12</span><span class="group-tag">Body</span></div><h3>Instrument Panel and Console</h3><a href="https://fordforums.com.au/wsmpub/sx/501-12.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-14</span><span class="group-tag">Body</span></div><h3>Handles, Locks, Latches</h3><a href="https://fordforums.com.au/wsmpub/sx/501-14.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-16</span><span class="group-tag">Body</span></div><h3>Wipers And Washers</h3><a href="https://fordforums.com.au/wsmpub/sx/501-16.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-19</span><span class="group-tag">Body</span></div><h3>Bumpers</h3><a href="https://fordforums.com.au/wsmpub/sx/501-19.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-20a</span><span class="group-tag">Body</span></div><h3>Occupant Restraints - Active</h3><a href="https://fordforums.com.au/wsmpub/sx/501-20a.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-20b</span><span class="group-tag">Body</span></div><h3>Occupant Restraints - Passive</h3><a href="https://fordforums.com.au/wsmpub/sx/501-20b.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-25a</span><span class="group-tag">Body</span></div><h3>Body Repairs - General</h3><a href="https://fordforums.com.au/wsmpub/sx/501-25a.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-25b</span><span class="group-tag">Body</span></div><h3>Body Repairs - Corrosion</h3><a href="https://fordforums.com.au/wsmpub/sx/501-25b.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-25c</span><span class="group-tag">Body</span></div><h3>Body Repairs - Plastic Repairs</h3><a href="https://fordforums.com.au/wsmpub/sx/501-25c.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-25d</span><span class="group-tag">Body</span></div><h3>Body Repairs - Water Leaks</h3><a href="https://fordforums.com.au/wsmpub/sx/501-25d.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-25e</span><span class="group-tag">Body</span></div><h3>Body Repairs - Wind Noise</h3><a href="https://fordforums.com.au/wsmpub/sx/501-25e.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-25g</span><span class="group-tag">Body</span></div><h3>Body Repairs - Noise</h3><a href="https://fordforums.com.au/wsmpub/sx/501-25g.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-27</span><span class="group-tag">Body</span></div><h3>Front End Sheet Metal Repairs</h3><a href="https://fordforums.com.au/wsmpub/sx/501-27.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-28</span><span class="group-tag">Body</span></div><h3>Roof Sheet Metal Repairs</h3><a href="https://fordforums.com.au/wsmpub/sx/501-28.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-29</span><span class="group-tag">Body</span></div><h3>Bodyside System Sheet Metal</h3><a href="https://fordforums.com.au/wsmpub/sx/501-29.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-30</span><span class="group-tag">Body</span></div><h3>Rear End Sheet Metal Repairs</h3><a href="https://fordforums.com.au/wsmpub/sx/501-30.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-31</span><span class="group-tag">Body</span></div><h3>Front Floor Sheet Metal Repairs</h3><a href="https://fordforums.com.au/wsmpub/sx/501-31.html" target="_blank" class="action-link">Open</a></div>
+                <div class="doc-card" data-group="group5"><div class="doc-meta"><span class="badge">501-32</span><span class="group-tag">Body</span></div><h3>Paint Preparation and</h3><a href="https://fordforums.com.au/wsmpub/sx/501-32.html" target="_blank" class="action-link">Open</a></div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>2026 | Developed by Sugandha KADP</p>
+    </footer>
+
+    <script>
+        /* Script maintained by: Sugandha KADP
+        */
+        function toggleSidebar() {
+            document.getElementById('sidebarNav').classList.toggle('mobile-active');
+        }
+
+        function filterGroup(groupName, element) {
+            // Close sidebar on mobile after selection
+            if (window.innerWidth <= 768) {
+                document.getElementById('sidebarNav').classList.remove('mobile-active');
+            }
+
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+            document.getElementById('currentCategoryTitle').innerText = element.innerText;
+            const cards = document.querySelectorAll('.doc-card');
+            cards.forEach(card => {
+                if (groupName === 'all' || card.getAttribute('data-group') === groupName) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        document.getElementById('manualSearch').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            const cards = document.querySelectorAll('.doc-card');
+            cards.forEach(card => {
+                const textContent = card.innerText.toLowerCase();
+                if (textContent.includes(query)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
